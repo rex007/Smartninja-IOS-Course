@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="n8i-OZ-LMg">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Images-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayr-11-oRU">
+                                <rect key="frame" x="-1003" y="-755" width="233" height="122"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="P4160183"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctP-Xj-2km">
+                                <rect key="frame" x="20" y="37" width="270" height="141"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="P4160183"/>
+                                <connections>
+                                    <segue destination="H1g-WC-Sp8" kind="show" identifier="slika1" id="PH1-Z9-ey2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzv-bz-cqY">
+                                <rect key="frame" x="20" y="213" width="270" height="141"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="slide01"/>
+                                <connections>
+                                    <segue destination="H1g-WC-Sp8" kind="show" id="447-y8-ZOo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hU-2R-aXI">
+                                <rect key="frame" x="20" y="390" width="270" height="141"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="slide02"/>
+                                <connections>
+                                    <segue destination="H1g-WC-Sp8" kind="show" id="VN9-DK-oaN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Images" prompt="jkajak" id="qxT-93-1oH">
+                        <barButtonItem key="backBarButtonItem" title="Nazaj" id="erB-yh-a9h"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982" y="337"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Oje-d5-xMG">
+            <objects>
+                <viewController id="H1g-WC-Sp8" customClass="DetailViewController" customModule="ImageViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HBP-7A-1Hr"/>
+                        <viewControllerLayoutGuide type="bottom" id="d5O-FX-9md"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5I1-C7-2gC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zBp-oY-Wtq">
+                                <rect key="frame" x="40" y="36" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="zBp-oY-Wtq" id="57F-1z-dwO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="teO-1S-Hh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1430" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Em0-ap-8nX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n8i-OZ-LMg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AAt-mc-l4O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lrO-SJ-Ops"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S04-Vp-q8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="337"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="P4160183" width="2272" height="1704"/>
+        <image name="slide01" width="1910" height="1036"/>
+        <image name="slide02" width="1690" height="1063"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="PH1-Z9-ey2"/>
+    </inferredMetricsTieBreakers>
+</document>
