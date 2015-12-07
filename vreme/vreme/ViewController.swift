@@ -16,6 +16,7 @@ let apiKey = "c3a0ad1a3491fe0fb803fc709ef3d6cb"
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
+    @IBOutlet weak var updatedAtLabel: UILabel!
     @IBOutlet weak var backgroundImg: UIImageView!
     @IBOutlet weak var locationView: UILabel!
     @IBOutlet weak var locationViewLayour: NSLayoutConstraint!
@@ -41,6 +42,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "didActivate", name: UIApplicationDidBecomeActiveNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didActivate", name: UIApplicationWillResignActiveNotification, object: nil)
     }
     
     func didActivate(){
@@ -93,6 +95,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             let intLon = Double(location.coordinate.longitude)
 
             manager.stopUpdatingLocation()
+            
+            whenWhasTheLastLocationUpdated()
             
             NSUserDefaults.standardUserDefaults().setObject("\(intLat)", forKey: "latitude")
             NSUserDefaults.standardUserDefaults().setObject("\(intLon)", forKey: "longitude")
@@ -168,6 +172,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 }
         }
         task.resume()
+    }
+    
+    func whenWhasTheLastLocationUpdated(){
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH:mm:ss"
+        let date = dateFormatter.stringFromDate(NSDate())
+        
+        updatedAtLabel.text = "Updated at: \(date)"
+       
     }
 
 

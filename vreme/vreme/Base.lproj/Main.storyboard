@@ -54,6 +54,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDT-Y7-0e3">
+                                <rect key="frame" x="213" y="565" width="174" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="174" id="7Lv-MN-StW"/>
+                                    <constraint firstAttribute="height" constant="21" id="hGD-uK-bOC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -62,12 +73,14 @@
                             <constraint firstItem="JnI-3D-Iho" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="236" id="5lD-ek-DKX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1qe-oa-osq" secondAttribute="bottom" id="AEA-jR-kmT"/>
                             <constraint firstItem="JnI-3D-Iho" firstAttribute="centerX" secondItem="mc4-AS-BbB" secondAttribute="centerX" id="E4T-fn-rGg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HDT-Y7-0e3" secondAttribute="bottom" constant="14" id="Geo-Ci-zaC"/>
                             <constraint firstItem="JnI-3D-Iho" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gm9-xp-HyV"/>
                             <constraint firstItem="JnI-3D-Iho" firstAttribute="leading" secondItem="mc4-AS-BbB" secondAttribute="leading" constant="91" id="KLA-89-zD4"/>
                             <constraint firstAttribute="trailing" secondItem="1qe-oa-osq" secondAttribute="trailing" id="OLa-mu-mgk"/>
                             <constraint firstItem="6pg-mb-x4e" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="UHu-7s-Fpx"/>
                             <constraint firstItem="6pg-mb-x4e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Udg-Iz-MEi"/>
                             <constraint firstItem="mc4-AS-BbB" firstAttribute="top" secondItem="JnI-3D-Iho" secondAttribute="bottom" constant="132" id="YpN-OG-g2f"/>
+                            <constraint firstItem="HDT-Y7-0e3" firstAttribute="centerX" secondItem="mc4-AS-BbB" secondAttribute="centerX" id="cJj-H8-Wuh"/>
                             <constraint firstItem="1qe-oa-osq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eGv-wG-RRH"/>
                         </constraints>
                     </view>
@@ -76,6 +89,7 @@
                         <outlet property="locationView" destination="6pg-mb-x4e" id="oCH-VB-mNz"/>
                         <outlet property="locationViewLayour" destination="UHu-7s-Fpx" id="CEf-2W-wAJ"/>
                         <outlet property="tempView" destination="mc4-AS-BbB" id="J2y-0D-ZbA"/>
+                        <outlet property="updatedAtLabel" destination="HDT-Y7-0e3" id="fX3-2r-gsL"/>
                         <outlet property="weatherIconView" destination="JnI-3D-Iho" id="Tdz-Rl-pga"/>
                     </connections>
                 </viewController>
